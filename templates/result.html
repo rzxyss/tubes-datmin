@@ -213,7 +213,7 @@
         <div class="section-title">
       <!-- Analisis Kata Input -->
       <div class="section">
-        <div class="section-title">🔤 Analisis Kata Input</div>
+        <div class="section-title">Analisis Kata Input</div>
         <div class="info-box">
           <strong>Token:</strong> {{ input_data.tokens|join(', ') }}<br />
           <strong>Hasil Stemming:</strong> {{ input_data.stemmed|join(', ') }}
@@ -227,10 +227,7 @@
       <!-- Daftar File -->
       <div class="section">
         <div class="section-title">
-         aftar File -->
-      <div class="section">
-        <div class="section-title">
-          📁 Daftar File yang Mengandung Kata ({{ all_files|length }} file)
+            Daftar File yang Mengandung Kata ({{ all_files|length }} file)
         </div>
         <div class="file-list">
           {% for file in all_files %}
