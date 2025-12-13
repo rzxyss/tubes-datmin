@@ -12,8 +12,8 @@
       }
 
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a;
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -22,23 +22,24 @@
       }
 
       .container {
-        background: white;
+        background: #2d2d2d;
         padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        box-shadow: none;
         max-width: 500px;
         width: 100%;
       }
 
       h1 {
-        color: #333;
+        color: #e0e0e0;
         margin-bottom: 10px;
         text-align: center;
-        font-size: 28px;
+        font-size: 24px;
+        font-weight: normal;
       }
 
       .subtitle {
-        color: #666;
+        color: #a0a0a0;
         text-align: center;
         margin-bottom: 30px;
         font-size: 14px;
@@ -51,64 +52,61 @@
       label {
         display: block;
         margin-bottom: 8px;
-        color: #444;
-        font-weight: 600;
+        color: #e0e0e0;
+        font-weight: normal;
         font-size: 14px;
       }
 
       input[type="text"] {
         width: 100%;
-        padding: 12px 15px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
-        transition: border-color 0.3s;
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        font-size: 14px;
+        background: #3a3a3a;
+        color: #e0e0e0;
       }
 
       input[type="text"]:focus {
         outline: none;
-        border-color: #667eea;
       }
 
       button {
         width: 100%;
-        padding: 14px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        padding: 12px;
+        background: #4a9eff;
+        color: #1a1a1a;
         border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: 600;
+        border-radius: 0;
+        font-size: 14px;
+        font-weight: normal;
         cursor: pointer;
-        transition: transform 0.2s, box-shadow 0.2s;
+        transition: background 0.2s;
       }
 
       button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        background: #5fadff;
       }
 
       button:active {
-        transform: translateY(0);
+        background: #3d8de6;
       }
 
       .error {
-        background-color: #fee;
-        color: #c33;
+        background-color: #4a2020;
+        color: #ff8080;
         padding: 12px;
-        border-radius: 8px;
+        border-radius: 0;
         margin-bottom: 20px;
-        border-left: 4px solid #c33;
         font-size: 14px;
       }
 
       .info {
-        background-color: #e3f2fd;
-        color: #1565c0;
+        background-color: #1f3a3a;
+        color: #80d0d0;
         padding: 15px;
-        border-radius: 8px;
+        border-radius: 0;
         margin-top: 20px;
-        border-left: 4px solid #1565c0;
         font-size: 13px;
         line-height: 1.6;
       }
@@ -121,40 +119,27 @@
   </head>
   <body>
     <div class="container">
-      <h1>🔍 Pencarian Kata</h1>
-      <p class="subtitle">
-        Cari kata dalam dataset dengan tokenizing & stemming
-      </p>
+      <h1>Tokenizing dan Stemming</h1>
 
       {% if error %}
-      <div class="error">⚠️ {{ error }}</div>
+      <div class="error">{{ error }}</div>
       {% endif %}
 
       <form action="/search" method="POST">
         <div class="form-group">
-          <label for="query">Masukkan kata yang ingin dicari:</label>
+          <label for="query">Masukkan kata :</label>
           <input
             type="text"
             id="query"
             name="query"
-            placeholder="Contoh: teknologi, data, sistem..."
+            placeholder="Contoh: teknologi, data, sistem"
             required
             autofocus
           />
         </div>
 
-        <button type="submit">🔎 Cari Sekarang</button>
+        <button type="submit">Cari</button>
       </form>
-
-      <div class="info">
-        <strong>ℹ️ Informasi:</strong>
-        Program akan mencari kata di folder <strong>dataset/</strong> dan
-        menampilkan:
-        <ul style="margin-left: 20px; margin-top: 8px">
-          <li>Daftar file yang mengandung kata tersebut</li>
-          <li>Detail tokenizing & stemming untuk file terbanyak</li>
-        </ul>
-      </div>
     </div>
   </body>
 </html>
