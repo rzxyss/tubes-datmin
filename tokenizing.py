@@ -2,6 +2,7 @@ import os
 import docx
 import PyPDF2
 import string
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 # --- Fungsi membaca file TXT ---
 def read_txt(path):
@@ -41,10 +42,31 @@ def tokenize(text):
     tokens = text.split()
     return tokens
 
+# --- Fungsi Stemming menggunakan Sastrawi ---
+def stem_tokens(tokens, stemmer):
+    stemmed_tokens = []
+    stem_mapping = {}
+    unstemmed_words = set()
+    
+    for token in tokens:
+        stemmed = stemmer.stem(token)
+        stemmed_tokens.append(stemmed)
+        stem_mapping[token] = stemmed
+        
+        # Identifikasi kata yang tidak berubah (tidak bisa di-stemming)
+        if token == stemmed:
+            unstemmed_words.add(token)
+    
+    return stemmed_tokens, stem_mapping, unstemmed_words
+
 
 # ======================
 # PROGRAM UTAMA
 # ======================
+
+# Inisialisasi Sastrawi Stemmer
+factory = StemmerFactory()
+stemmer = factory.create_stemmer()
 
 dataset_path = input("Masukkan path direktori: ")
 
@@ -83,16 +105,38 @@ for filename in files:
     # tokenizing
     tokens = tokenize(content)
 
-    # hitung frekuensi setiap kata
+    # hitung frekuensi setiap kata (TOKENIZING)
     freq = {}
     for t in tokens:
         freq[t] = freq.get(t, 0) + 1
 
-    # tampilkan output sesuai format tugas
+    # STEMMING - proses stemming pada token
+    stemmed_tokens, stem_mapping, unstemmed_words = stem_tokens(tokens, stemmer)
+    
+    # hitung frekuensi kata dasar (hasil stemming)
+    stem_freq = {}
+    for st in stemmed_tokens:
+        stem_freq[st] = stem_freq.get(st, 0) + 1
+
+    # tampilkan output TOKENIZING
     print(f"\n({no}). {filename}")
-    print("     Mengandung kata:")
+    print("Kata Hasil Tokenizing:")
 
     for word in sorted(freq.keys()):
         print(f"             {word} = {freq[word]}")
+
+    # tampilkan output STEMMING
+    print(f"\nKata Dasar Hasil Stemming:")
+    for word in sorted(stem_freq.keys()):
+        print(f"             {word} = {stem_freq[word]}")
+    
+    # tampilkan kata yang tidak dapat di-stemming
+    if unstemmed_words:
+        print(f"\nKata yang tidak dapat di-stemming ({len(unstemmed_words)} kata):")
+        unstemmed_sorted = sorted(unstemmed_words)
+        for idx, word in enumerate(unstemmed_sorted, 1):
+            print(f"             {idx}. {word}")
+    else:
+        print(f"\nSemua kata berhasil di-stemming")
 
     no += 1
