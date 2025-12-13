@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Pencarian - {{ input_data.word }}</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 30px 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #667eea;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 32px;
+      }
+
+      .search-info {
+        color: #666;
+        font-size: 16px;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #667eea;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: background 0.3s;
+      }
+
+      .back-button:hover {
+        background: #5568d3;
+      }
+
+      .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+      }
+
+      .section-title {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .info-box {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .file-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .file-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background: white;
+        border-radius: 8px;
+        border: 2px solid #e0e0e0;
+        transition: all 0.3s;
+      }
+
+      .file-item.top {
+        border-color: #667eea;
+        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        font-weight: 600;
+      }
+
+      .file-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .file-name {
+        color: #333;
+        font-size: 15px;
+      }
+
+      .file-count {
+        background: #667eea;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .file-item.top .file-count {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .detail-box {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+
+      .detail-box h4 {
+        color: #667eea;
+        margin-bottom: 12px;
+        font-size: 16px;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 8px;
+      }
+
+      .word-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+      }
+
+      .word-item:last-child {
+        border-bottom: none;
+      }
+
+      .word-text {
+        color: #333;
+      }
+
+      .word-count {
+        color: #667eea;
+        font-weight: 600;
+      }
+
+      .unstemmed-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .unstemmed-item {
+        background: #e3f2fd;
+        color: #1565c0;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 13px;
+      }
+
+      .badge {
+        background: #667eea;
+        color: white;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        margin-left: 8px;
+      }
+
+      .top-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 12px;
+        margin-left: 10px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/" class="back-button">← Kembali ke Pencarian</a>
+
+      <div class="header">
+        <h1>📊 Hasil Pencarian</h1>
+        <p class="search-info">
+          Kata yang dicari: <strong>"{{ input_data.word }}"</strong>
+        </p>
+      </div>
+
+      <!-- Analisis Kata Input -->
+      <div class="section">
+        <div class="section-title">🔤 Analisis Kata Input</div>
+        <div class="info-box">
+          <strong>Token:</strong> {{ input_data.tokens|join(', ') }}<br />
+          <strong>Hasil Stemming:</strong> {{ input_data.stemmed|join(', ') }}
+          {% if input_data.unstemmed %} <br /><strong
+            >Tidak dapat di-stemming:</strong
+          >
+          {{ input_data.unstemmed|join(', ') }} {% else %} <br /><strong
+            >✓ Semua kata berhasil di-stemming</strong
+          >
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Daftar File -->
+      <div class="section">
+        <div class="section-title">
+          📁 Daftar File yang Mengandung Kata ({{ all_files|length }} file)
+        </div>
+        <div class="file-list">
+          {% for file in all_files %}
+          <div class="file-item {% if loop.first %}top{% endif %}">
+            <span class="file-name">
+              {{ file.filename }} {% if loop.first %}
+              <span class="top-badge">⭐ TERBANYAK</span>
+              {% endif %}
+            </span>
+            <span class="file-count">{{ file.count }} kemunculan</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Detail File Teratas -->
+      <div class="section">
+        <div class="section-title">
+          📄 Detail File Teratas: {{ top_file }}
+          <span class="badge">{{ top_count }} kemunculan</span>
+        </div>
+
+        <div class="detail-grid">
+          <!-- Tokenizing -->
+          <div class="detail-box">
+            <h4>🔹 Kata Hasil Tokenizing (Top 20)</h4>
+            {% for word, count in tokenizing %}
+            <div class="word-item">
+              <span class="word-text">{{ word }}</span>
+              <span class="word-count">{{ count }}</span>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Stemming -->
+          <div class="detail-box">
+            <h4>🔹 Kata Dasar Hasil Stemming (Top 20)</h4>
+            {% for word, count in stemming %}
+            <div class="word-item">
+              <span class="word-text">{{ word }}</span>
+              <span class="word-count">{{ count }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Kata Tidak Ter-stem -->
+        <div class="detail-box" style="margin-top: 20px">
+          <h4>
+            ❌ Kata yang Tidak Dapat Di-stemming
+            <span class="badge"
+              >{{ total_unstemmed }} total{% if unstemmed|length <
+              total_unstemmed %}, menampilkan {{ unstemmed|length }}{% endif
+              %}</span
+            >
+          </h4>
+          {% if unstemmed %}
+          <div class="unstemmed-list">
+            {% for word in unstemmed %}
+            <span class="unstemmed-item">{{ loop.index }}. {{ word }}</span>
+            {% endfor %}
+          </div>
+          {% else %}
+          <p style="color: #4caf50; margin-top: 10px">
+            ✓ Semua kata berhasil di-stemming
+          </p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px">
+        <a href="/" class="back-button">🔍 Cari Kata Lain</a>
+      </div>
+    </div>
+  </body>
+</html>
