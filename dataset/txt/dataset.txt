@@ -1,0 +1,129 @@
+2.1 Akuisisi Pengetahuan
+Dalam pengembangan sistem pakar untuk mendiagnosis gangguan pendengaran, proses akuisisi pengetahuan dilakukan untuk membangun basis pengetahuan yang valid dan andal. Berikut penjelasan dari setiap aspek akuisisi:
+a. Penentuan Pakar
+Meskipun tidak dilakukan wawancara langsung dengan dokter THT atau spesialis pendengaran, pengetahuan yang digunakan diperoleh dari sumber ilmiah terpercaya seperti jurnal penelitian, artikel medis, dan buku referensi yang ditulis oleh para ahli kesehatan. Salah satu jurnal utama yang digunakan adalah:
+Putri Septiani Indah Pratiwi, M. Ghofar Rohman, Miftahus Sholihin
+"Sistem Pakar Penyakit Telinga Menggunakan Metode Naïve Bayes", Generation Journal, Vol. 7 No. 2 (2023)Dengan demikian, para peneliti dan penulis jurnal tersebut dijadikan rujukan sebagai pakar tidak langsung karena karya ilmiahnya telah melalui proses peer-review dan validasi akademik.
+b. Teknik Akuisisi Pengetahuan
+Teknik utama yang digunakan dalam proyek ini adalah studi literatur (documented expert knowledge acquisition), yang mencakup:
+Kajian jurnal ilmiah yang relevan dengan penyakit telinga dan sistem pakar.
+Penelaahan buku referensi tentang gejala dan diagnosis penyakit pendengaran.
+Pemahaman terhadap metode inferensi seperti forward chaining dan backward chaining.
+Studi literatur dipilih karena:
+Menjamin validitas tinggi melalui sumber yang telah direview secara akademik.
+Memberikan cakupan informasi yang luas dan sistematis.
+Cocok digunakan ketika akses terhadap pakar secara langsung terbatas.
+c. Hasil Akuisisi Pengetahuan
+Hasil dari proses akuisisi pengetahuan meliputi:
+Klasifikasi penyakit telinga: Seperti otitis eksterna, otitis media, gangguan pendengaran sensorineural, dll.
+Gejala khas dari masing-masing penyakit: Misalnya, nyeri telinga, gangguan keseimbangan, keluar cairan, atau kehilangan pendengaran.
+Relasi gejala-penyakit: Diformulasikan dalam bentuk aturan logika IF...THEN yang dapat diproses oleh mesin inferensi.
+Struktur sistem pakar: Menggunakan pendekatan rule-based system dengan metode inferensi forward chaining sebagai dasar penalaran utama.
+Contoh aturan produksi (berdasarkan referensi jurnal):
+oIF [Gejala A] AND [Gejala B] THEN [Diagnosis Penyakit X]
+oIF [Diagnosis Penyakit X] THEN [Saran Pencegahan atau Tindakan]
+2.2 Knowledge Base
+1.a. Jenis Knowledge Base
+Jenis knowledge base yang digunakan dalam sistem pakar diagnosis penyakit telinga ini adalah rule-based knowledge base (basis pengetahuan berbasis aturan). Pada jenis ini, pengetahuan disimpan dalam bentuk aturan produksi atau aturan IF–THEN, di mana setiap aturan mewakili hubungan antara gejala (fakta awal) dan penyakit (kesimpulan).
+Selain rule-based, sistem ini juga dapat dikembangkan lebih lanjut untuk mengadopsi knowledge base dinamis, yaitu basis pengetahuan yang dapat diperbarui seiring dengan masuknya data atau gejala-gejala baru, termasuk masukan dari pengguna maupun pakar.
+2.b. Penjelasan Knowledge Base Sesuai Jenisnya
+Basis pengetahuan rule-based pada sistem pakar ini dibentuk dari hasil studi literatur, khususnya jurnal penelitian medis dan sistem pakar seperti jurnal:
+Hasugian et al. (2021) – “Penerapan Metode Forward-Backward Chaining pada Sistem Pakar Diagnosis dan Penyakit Telinga”.
+struktur penalaran dan representasi basis pengetahuan sangat relevan untuk diterapkan dalam domain kesehatan manusia, termasuk gangguan pendengaran.
+Komponen utama knowledge base meliputi:
+1.Fakta Awal: Gejala-gejala penyakit telinga seperti nyeri, telinga berdenging, keluar cairan, gangguan pendengaran, dan pusing.
+2.Aturan Produksi (Production Rules): Disusun dalam format IF–THEN, contoh:
+nginx
+CopyEdit
+IF telinga berdenging AND gangguan pendengaran AND pusing
+THEN kemungkinan penyakit adalah Otitis Interna
+3.Tujuan/Diagnosis: Hasil inferensi dari fakta yang cocok terhadap aturan tertentu, misalnya Otitis Eksterna, Presbikusis, atau Tinnitus.
+Metode Inferensi: Forward Chaining
+Sistem menalar mulai dari fakta yang dimasukkan oleh pengguna, lalu mencocokkannya dengan bagian IF dari aturan. Jika cocok, bagian THEN akan diaktifkan sebagai fakta baru. Proses ini berlangsung iteratif hingga mencapai diagnosis. Metode ini sangat cocok untuk sistem diagnostik medis karena meniru pendekatan berpikir logis dari gejala ke kemungkinan penyakit.
+Contoh Struktur Aturan Diagnosa (Sederhana):
+Kode Gejala	Deskripsi Gejala	Kode Penyakit	Nama Penyakit
+G01	Gangguan pendengaran	P01	Otitis Media
+G02	Telinga berdenging	P02	Tinnitus
+G03	Keluar cairan dari telinga	P01	Otitis Media
+G04	Pusing	P03	Otitis Interna
+Contoh aturan produksi:
+IF G01 AND G03 THEN P01 (Otitis Media)
+IF G01 AND G02 AND G04 THEN P03 (Otitis Interna)
+Basis pengetahuan ini fleksibel dan dapat diperluas di masa depan, misalnya dengan:
+Menambahkan confidence level (mengarah ke metode certainty factor).
+Memasukkan feedback pengguna untuk memperbaiki aturan.
+
+
+
+
+2.3 Mesin Inferensi
+3.a. Jenis Mesin Inferensi
+Sistem pakar ini menggunakan mesin inferensi dengan metode Forward Chaining, yaitu teknik penalaran yang dimulai dari fakta (gejala-gejala yang dimasukkan pengguna) dan menelusuri aturan-aturan dalam basis pengetahuan untuk memperoleh kesimpulan berupa diagnosis penyakit telinga.
+Forward Chaining dikenal sebagai pendekatan data-driven, karena prosesnya dimulai dari data/fakta awal menuju simpulan logis. Metode ini cocok untuk sistem diagnostik karena mengikuti alur berpikir medis dari gejala ke penyakit.
+
+4.b. Langkah-langkah Forward Chaining (Dengan Contoh Data Manual)
+Berikut penjelasan langkahnya, disertai dengan contoh:
+Contoh Data Manual:
+Gejala yang diinput pengguna:
+G01: Gangguan pendengaran
+G02: Telinga berdenging
+G03: Pusing
+Aturan Produksi dalam Knowledge Base:
+java
+CopyEdit
+R1: IF G01 AND G02 THEN P01 (Tinnitus)
+R2: IF G01 AND G02 AND G03 THEN P02 (Otitis Interna)
+R3: IF G01 AND G03 THEN P03 (Presbikusis)
+Langkah-Langkah Proses Inferensi:
+1.Fakta Awal:
+Sistem menerima input dari pengguna berupa: G01, G02, G03.
+2.Pencocokan Aturan:
+Sistem memeriksa semua aturan dalam knowledge base:
+oR1 cocok (G01 & G02)
+oR2 cocok (G01, G02, G03)
+oR3 juga cocok (G01 & G03)
+3.Eksekusi Aturan:
+Karena R2 memiliki kondisi paling lengkap, sistem mengeksekusi aturan tersebut terlebih dahulu.
+4.Kesimpulan:
+Berdasarkan fakta yang cocok dengan aturan R2, sistem menyimpulkan bahwa kemungkinan besar pengguna mengalami penyakit: Otitis Interna (P02).
+5.(Opsional) Sistem juga bisa mencantumkan kemungkinan alternatif: Tinnitus (P01) dan Presbikusis (P03) jika dibutuhkan sebagai perbandingan.
+
+5.c. Ilustrasi Skema Forward Chaining (Opsional Tambahan)
+less
+CopyEdit
+[Input Fakta]
+   ↓
+G01, G02, G03
+   ↓
+Cocok dengan:
+R2 → G01 AND G02 AND G03 → THEN P02 (Otitis Interna)
+   ↓
+[Diagnosis Output]
+→ Otitis Interna
+
+Metode ini diadaptasi dari struktur inferensi pada jurnal referensi, di mana forward chaining digunakan untuk menelusuri fakta gejala penyakit telinga hingga menemukan diagnosis dan solusi yang sesuai. Pendekatan serupa dapat diterapkan untuk penyakit manusia dengan basis aturan medis yang valid.
+
+
+
+1. Diagram Alur Inferensi (Forward Chaining)
+Berikut adalah diagram alur proses inferensi dengan metode forward chaining:
+- Pengguna menginput gejala.
+- Sistem mencocokkan gejala dengan bagian IF dari aturan produksi.
+- Jika cocok, aturan dijalankan dan menghasilkan kesimpulan penyakit.
+- Proses berulang hingga kesimpulan ditemukan.
+
+Diagram ini dapat digambarkan secara visual sebagai berikut:
+
+[Mulai] --> [Input Gejala] --> [Cocokkan dengan Aturan] --> [Aturan Cocok?] --> [Ya] --> [Simpulkan Penyakit] --> [Selesai]
+                                      |
+                                      [Tidak] --> [Periksa Aturan Lain]
+2. Tabel Aturan Produksi Berdasarkan Gejala dan Penyakit
+Kode Penyakit	Nama Penyakit	Gejala (Kode)
+P01	Otitis Eksterna	G01, G02, G03, G05, G06, G11
+P02	Otitis Media	G04, G05, G07, G08, G10
+P03	Otitis Interna	G05, G09, G10
+P04	Gendang Telinga Pecah	G05, G09, G10, G11
+P05	Kolesteatoma	G04, G06, G11
+P06	Presbikusis	G05, G04
+
+Catatan: Data gejala dan relasi penyakit diambil dari jurnal 'Sistem Pakar Penyakit Telinga Menggunakan Metode Naïve Bayes' oleh Putri Septiani Indah Pratiwi, dkk (2023). Metode inferensi dalam proyek ini menggunakan pendekatan forward chaining.

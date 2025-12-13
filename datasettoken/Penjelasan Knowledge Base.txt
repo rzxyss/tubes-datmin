@@ -1,0 +1,4 @@
+b. Penjelasan Knowledge Base Sesuai Jenisnya
+Basis pengetahuan rule-based pada sistem pakar ini dibentuk dari hasil studi literatur, khususnya jurnal penelitian medis dan sistem pakar seperti jurnal:
+Hasugian et al. (2021) – “Penerapan Metode Forward-Backward Chaining pada Sistem Pakar Diagnosis dan Penyakit Telinga”.
+struktur penalaran dan representasi basis pengetahuan sangat relevan untuk diterapkan dalam domain kesehatan manusia, termasuk gangguan pendengaran.
