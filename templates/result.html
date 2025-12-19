@@ -6,7 +6,10 @@
 </head>
 <body>
     <div class="container">
+
         <h2>Hasil untuk: "{{ query }}"</h2>
+
+        <h3>Top 3 Dokumen Paling Relevan</h3>
 
         <table>
             <tr>
@@ -22,7 +25,37 @@
             {% endfor %}
         </table>
 
+        {% if top_file %}
+        <hr>
+
+        <h3>Detail Dokumen Teratas</h3>
+
+        <p><b>Nama File:</b> {{ top_file }}</p>
+
+        <h4>Cuplikan Isi Dokumen</h4>
+        <div class="box">
+            {{ content }}
+        </div>
+
+        <h4>Tokenizing</h4>
+        <div class="box">
+            {{ tokens }}
+        </div>
+
+        <h4>Pembersihan Kata</h4>
+        <div class="box">
+            {{ cleaned }}
+        </div>
+
+        <h4>Stemming</h4>
+        <div class="box">
+            {{ stemmed }}
+        </div>
+        {% endif %}
+
+        <br>
         <a href="/">← Kembali</a>
+
     </div>
 </body>
 </html>

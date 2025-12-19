@@ -26,80 +26,79 @@ def index():
 @app.route("/search", methods=["POST"])
 def search():
     query = request.form.get("query", "").strip()
-
     if not query:
-        return render_template("index.html",
-                               error="Query tidak boleh kosong")
+        return render_template("index.html", error="Query tidak boleh kosong")
 
-    # =====================
-    # PREPROCESS QUERY
-    # =====================
+    # === PREPROCESS QUERY ===
     query_tokens = preprocess(query, kamus)
 
     docs_tokens = []
+    docs_raw = []
     filenames = []
 
-    # =====================
-    # BACA & PREPROCESS DOKUMEN
-    # =====================
     for filename in os.listdir(DATASET_PATH):
         path = os.path.join(DATASET_PATH, filename)
-
         if not os.path.isfile(path):
             continue
 
         ext = filename.split(".")[-1].lower()
-
         if ext == "txt":
             text = read_txt(path)
         elif ext == "pdf":
-            text = read_pdf(path)
+            try:
+                text = read_pdf(path)
+            except:
+                continue
         elif ext == "docx":
             text = read_docx(path)
         else:
             continue
 
+        docs_raw.append(text)
         docs_tokens.append(preprocess(text, kamus))
         filenames.append(filename)
 
-    # =====================
-    # VOCABULARY
-    # =====================
+    # === VSM PROCESS ===
     vocab = sorted(set(sum(docs_tokens + [query_tokens], [])))
 
-    # =====================
-    # TF & IDF
-    # =====================
     tf_docs = [compute_tf(tokens) for tokens in docs_tokens]
     tf_query = compute_tf(query_tokens)
 
-    idf = compute_idf(docs_tokens + [query_tokens])
+    idf = compute_idf(docs_tokens)
 
-    # =====================
-    # VECTOR SPACE MODEL
-    # =====================
-    doc_vectors = [
-        vectorize(tf, idf, vocab) for tf in tf_docs
-    ]
+    doc_vectors = [vectorize(tf, idf, vocab) for tf in tf_docs]
     query_vector = vectorize(tf_query, idf, vocab)
 
-    # =====================
-    # COSINE SIMILARITY
-    # =====================
     results = []
     for fname, vec in zip(filenames, doc_vectors):
         sim = cosine_sim(query_vector, vec)
         results.append((fname, round(sim, 4)))
 
-    # =====================
-    # SORT HASIL
-    # =====================
     results.sort(key=lambda x: x[1], reverse=True)
+
+    # === AMBIL TOP 3 ===
+    top_results = results[:3]
+
+    # === DOKUMEN TERATAS ===
+    top_file = top_results[0][0]
+    top_index = filenames.index(top_file)
+
+    raw_text = docs_raw[top_index][:1500]  # cuplikan isi
+
+    # Tahapan preprocessing untuk ditampilkan
+    tokens = docs_raw[top_index].lower().split()
+    cleaned = preprocess(docs_raw[top_index], kamus)
+    stemmed = cleaned
 
     return render_template(
         "result.html",
         query=query,
-        results=results
+        results=top_results,
+        top_file=top_file,
+        content=raw_text,
+        tokens=tokens[:50],
+        cleaned=cleaned[:50],
+        stemmed=stemmed[:50]
     )
 
 

@@ -12,12 +12,18 @@ def read_txt(path):
 
 def read_pdf(path):
     text = ""
-    with open(path, "rb") as f:
-        reader = PyPDF2.PdfReader(f)
-        for page in reader.pages:
-            t = page.extract_text()
-            if t:
-                text += t + " "
+    try:
+        with open(path, "rb") as f:
+            reader = PyPDF2.PdfReader(f)
+            for page in reader.pages:
+                try:
+                    t = page.extract_text()
+                    if t:
+                        text += t + " "
+                except:
+                    continue
+    except:
+        return ""
     return text
 
 def read_docx(path):
