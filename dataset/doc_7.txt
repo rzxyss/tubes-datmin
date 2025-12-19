@@ -1,0 +1,18 @@
+JUDUL:
+Mekanika Kuantum Polimer dan Batas Kontinumnya
+
+ABSTRAK:
+  Representasi kuantum pergantian kanonik yang agak non-standar
+hubungan sistem mekanika kuantum, yang dikenal sebagai representasi polimer
+mendapat perhatian dalam beberapa tahun terakhir, karena kemungkinan hubungannya dengan Planck
+skala fisika. Secara khusus, pendekatan ini diikuti secara simetris
+sektor loop gravitasi kuantum yang dikenal sebagai loop kosmologi kuantum. Di sini kita menjelajah
+aspek yang berbeda dari hubungan antara teori Schroedinger biasa dan
+deskripsi polimer. Makalah ini memiliki dua bagian. Yang pertama, kita turunkan
+mekanika kuantum polimer dimulai dari teori Schroedinger biasa
+dan tunjukkan bahwa deskripsi polimer muncul sebagai batas yang sesuai. Di
+bagian kedua kita mempertimbangkan batas kontinum teori ini, yaitu kebalikannya
+proses di mana seseorang memulai dari teori diskrit dan mencoba memulihkannya kembali
+mekanika kuantum Schroedinger biasa. Kami mempertimbangkan beberapa contoh
+bunga, termasuk osilator harmonik, partikel bebas dan sederhana
+model kosmologis.

@@ -1,0 +1,16 @@
+JUDUL:
+Karakter bosonik pasangan atom Cooper melintasi resonansi
+
+ABSTRAK:
+  Kami mempelajari fungsi gelombang dua partikel dari atom berpasangan dalam gas Fermi dengan
+kekuatan interaksi merdu dikendalikan oleh resonansi Feshbach. Pasangan Cooper
+fungsi gelombang diperiksa karakter bosoniknya, yang dikuantifikasi oleh
+koreksi faktor peningkatan Bose terkait dengan penciptaan dan
+pemusnahan operator partikel komposit. Sebuah contoh diberikan untuk a
+gas seragam tiga dimensi. Dua definisi fungsi gelombang pasangan Cooper adalah
+diperiksa. Salah satunya dipilih untuk mencerminkan tatanan jarak jauh di luar diagonal
+(ODLRO). Yang lainnya berhubungan dengan proyeksi berpasangan dari keadaan BCS. Di
+sisi dengan panjang hamburan negatif, kami menemukan bahwa atom berpasangan dijelaskan oleh
+ODLRO lebih bosonik daripada definisi proyeksi pasangan. Hal ini juga ditemukan
+bahwa pada $(k_F a)^{-1} \ge 1$, kedua definisi memberikan hasil yang serupa, di mana lebih banyak
+dari 90% atom menempati kondensat molekul yang sesuai.

@@ -1,0 +1,14 @@
+JUDUL:
+Pengukuran Faktor Bentuk Hadronik pada D0 --> K- e+ nue Decays
+
+ABSTRAK:
+  Bentuk faktor bentuk hadronik f+(q2) pada peluruhan D0 --> K- e+ nue
+telah diukur dalam model analisis independen dan dibandingkan dengan teoritis
+perhitungan. Kami menggunakan 75 fb(-1) data yang direkam oleh detektor BABAR di
+Penumbuk elektron-positron PEPII. Fraksi percabangan peluruhan yang sesuai,
+relatif terhadap peluruhan D0 --> K- pi+, juga telah diukur menjadi RD = BR(D0
+--> K- e+ nue)/BR(D0 --> K- pi+) = 0,927 +/- 0,007 +/- 0,012. Dari ini
+hasil, dan menggunakan nilai rata-rata dunia saat ini untuk BR(D0 --> K- pi+), the
+normalisasi faktor bentuk pada q2=0 ditentukan menjadi f+(0)=0.727 +/-
+0,007 +/- 0,005 +/- 0,007 dimana ketidakpastian bersifat statistik, sistematis,
+dan dari masukan eksternal, masing-masing.

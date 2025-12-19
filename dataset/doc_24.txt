@@ -1,0 +1,17 @@
+JUDUL:
+Pembentukan kuasi-soliton dalam film feromagnetik terbatas melintang
+  media
+
+ABSTRAK:
+  Pembentukan bentuk gelombang gelombang spin kuasi-2D dalam magnet longitudinal
+garis-garis film ferimagnetik diamati dengan menggunakan resolusi ruang dan waktu
+Teknik hamburan cahaya brillouin. Dalam rezim linier ditemukan bahwa
+kurungan mengurangi amplitudo magnetisasi dinamis di dekat
+tepi garis lateral. Dengan demikian, apa yang disebut penyematan dinamis dipolar efektif
+magnetisasi terjadi di tepinya.
+  Dalam rezim nonlinier, paket gelombang spin stabil baru merambat sepanjang a
+struktur pandu gelombang, yang menyebabkan ketidakstabilan dan interaksi transversal
+dengan dinding samping pandu gelombang penting untuk diamati. Itu
+percobaan dan simulasi numerik dari evolusi pulsa menunjukkan bahwa
+bentuk gelombang yang terbentuk dan perilakunya sangat dipengaruhi oleh
+kurungan.

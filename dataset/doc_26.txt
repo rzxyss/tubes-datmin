@@ -1,0 +1,14 @@
+JUDUL:
+Substruktur Placeholder II: Meta-Fraktal, Terbuat dari Kotak-Layang-Layang, Isi
+  Langit Dimensi Tak Terbatas
+
+ABSTRAK:
+  Pembagi nol (ZDs) diturunkan oleh Proses Cayley-Dickson (CDP) dari
+Bilangan hiperkompleks berdimensi N (N pangkat 2, minimal 4) dapat mewakili
+singularitas dan, ketika N mendekati tak terhingga, fraktal -- dan karenanya, bebas skala
+jaringan. Bilangan bulat apa pun yang lebih besar dari 8 dan bukan pangkat 2 akan menghasilkan a
+meta-fraktal atau "Langit" bila diartikan sebagai "konstanta penyangga" (S) dari sebuah
+ansambel figur puncak oktahedral yang disebut "Kotak-Layang-Layang" (dasar
+blok bangunan ZD). Aturan atau "resep" manipulasi bit yang sangat sederhana
+menyediakan alat untuk mengubah satu genus fraktal menjadi genus lain dalam konteksnya
+kompleksitas Kelas 4 Wolfram.

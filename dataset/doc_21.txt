@@ -1,0 +1,12 @@
+JUDUL:
+Gelombang Sinkronisasi Molekuler dalam Array yang Diatur Secara Alosterik
+  Enzim
+
+ABSTRAK:
+  Pembentukan pola spatiotemporal dalam reaksi enzimatik yang diaktifkan produk di
+konsentrasi enzim yang tinggi diselidiki. Simulasi stokastik menunjukkan hal itu
+siklus pergantian katalitik enzim individu dapat menjadi koheren dan itu
+pola gelombang kompleks sinkronisasi molekul dapat berkembang. Analisisnya
+berdasarkan perkiraan mean-field menunjukkan bahwa pola yang diamati
+hasil dari kehadiran Hopf dan bifurkasi gelombang dalam pertimbangan
+sistem.

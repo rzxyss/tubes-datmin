@@ -1,0 +1,17 @@
+JUDUL:
+Evolusi sistem Bumi-Bulan berdasarkan bidang materi gelap
+  model fluida
+
+ABSTRAK:
+  Evolusi sistem Bumi-Bulan digambarkan oleh medan materi gelap
+model fluida yang diusulkan pada Pertemuan Pembagian Partikel dan Medan 2004,
+Masyarakat Fisik Amerika. Perilaku sistem Bumi-Bulan saat ini sejalan
+dengan model ini dengan sangat baik dan pola umum evolusi
+Sistem Bulan-Bumi yang digambarkan dengan model ini sesuai dengan sistem geologi dan fosil
+bukti. Jarak terdekat Bulan ke Bumi adalah sekitar 259.000 km pada 4,5
+miliar tahun yang lalu, yang jauh melampaui batas Roche. Hasilnya menunjukkan
+bahwa gesekan pasang surut mungkin bukan penyebab utama evolusi
+Sistem Bumi-Bulan. Konstanta fluida medan materi gelap rata-rata berasal dari
+Data sistem Bumi-Bulan adalah 4,39 x 10^(-22) s^(-1)m^(-1). Model ini memprediksi
+bahwa rotasi Mars juga melambat seiring dengan laju percepatan sudutnya
+sekitar -4,38 x 10^(-22) rad s^(-2).

@@ -1,0 +1,23 @@
+JUDUL:
+ALMA sebagai wahana ideal kromosfer matahari
+
+ABSTRAK:
+  Sifat kromosfer matahari, struktur dan dinamikanya,
+masih jauh dari dipahami dengan baik, meskipun telah dilakukan penelitian intensif.
+Di sini kami menunjukkan potensi pengamatan kromosfer pada milimeter
+panjang gelombang untuk menyelesaikan masalah lama ini. Perhitungan dilakukan
+dengan model dinamis kromosfer matahari yang canggih berkat Carlsson
+dan Stein menunjukkan bahwa emisi milimeter sangat sensitif terhadap
+proses dinamis di kromosfer dan panjang gelombang yang sesuai untuk dilihat
+untuk tanda tangan dinamis berada pada kisaran 0,8-5,0 mm. Model tersebut juga menyarankan
+bahwa pengamatan resolusi tinggi pada panjang gelombang mm, seperti yang akan disediakan oleh
+ALMA, akan memiliki sifat unik dalam bereaksi terhadap panas dan dingin
+gas, dan dengan demikian akan memiliki potensi untuk membedakan model-model saingannya
+atmosfer matahari. Dengan demikian, hasil awal diperoleh dari pengamatan
+Matahari yang tenang pada 3,5 mm dengan susunan BIMA (resolusi 12 detik busur) terungkap
+osilasi signifikan dengan amplitudo 50-150 K dan frekuensi 1,5-8
+mHz dengan kecenderungan osilasi jangka pendek dalam internetwork dan lebih lama
+periode di wilayah jaringan. Namun resolusi spasial yang lebih tinggi, seperti itu
+disediakan oleh ALMA, diperlukan pemisahan yang bersih antar fitur
+dalam atmosfer matahari dan untuk perbandingan yang memadai dengan output dari
+simulasi dinamis yang komprehensif.

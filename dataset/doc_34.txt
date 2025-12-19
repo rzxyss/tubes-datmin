@@ -1,0 +1,6 @@
+JUDUL:
+Asal Mutan Adaptif: Pengukuran Kuantum?
+
+ABSTRAK:
+  Ini adalah tambahan pada makalah arXiv:q-bio/0701050, yang berisi teks
+korespondensi dikirim ke Nature pada tahun 1990.

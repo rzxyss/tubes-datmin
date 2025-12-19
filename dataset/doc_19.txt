@@ -1,0 +1,8 @@
+JUDUL:
+Perkiraan kemungkinan kepunahan proses kontak berdasarkan
+  dasar Gr\"obner
+
+ABSTRAK:
+  Dalam catatan ini kami memberikan metode baru untuk mendapatkan serangkaian perkiraan
+probabilitas kepunahan proses kontak satu dimensi dengan menggunakan
+Dasar dasar.

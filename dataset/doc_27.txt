@@ -1,0 +1,13 @@
+JUDUL:
+Resonansi Magnetophonon yang Bergantung pada Faktor Pengisian dalam Graphene
+
+ABSTRAK:
+  Kami menggambarkan struktur halus aneh yang diperoleh oleh fonon optik dalam bidang
+pada titik Gamma di graphene ketika diresonansi dengan salah satu
+transisi antar tingkat Landau dalam materi ini. Efeknya paling besar
+diucapkan ketika mode kisi ini (terkait dengan G-band di graphene Raman
+spektrum) beresonansi dengan transisi antar tingkat Landau 0 -> (+,1) dan
+(-,1) -> 0, pada medan magnet B_0 ~ 30 T. Dapat digunakan untuk mengukur
+kekuatan kopling elektron-fonon secara langsung, dan faktor pengisiannya
+ketergantungan dapat digunakan secara eksperimental untuk mendeteksi kisi terpolarisasi sirkular
+mode.

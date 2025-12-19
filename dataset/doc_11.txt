@@ -1,0 +1,10 @@
+JUDUL:
+Menghitung bentuk modular Genus 2 Hilbert-Siegel melalui $\Q(\sqrt{5})$ via
+  korespondensi Jacquet-Langlands
+
+ABSTRAK:
+  Dalam makalah ini kami menyajikan algoritma untuk menghitung sistem eigen Hecke
+Titik puncak Hilbert-Siegel terbentuk di atas bidang kuadrat nyata dengan bilangan kelas sempit
+satu. Kami memberikan beberapa contoh ilustrasi menggunakan bidang kuadrat
+$\Q(\sqrt{5})$. Dalam contoh tersebut, kami mengidentifikasi eigenform Hilbert-Siegel itu
+adalah kemungkinan lift dari Hilbert eigenforms.

@@ -1,0 +1,9 @@
+JUDUL:
+Penentu nomor siklus Stirling menghitung asiklik tak berlabel
+  automata sumber tunggal
+
+ABSTRAK:
+  Kami menunjukkan bahwa determinan nomor siklus Stirling menghitung asiklik yang tidak berlabel
+automata sumber tunggal. Buktinya melibatkan bijection dari automata ini ke
+jalur kisi tertentu yang ditandai dan involusi pembalikan tanda untuk mengevaluasi
+penentu.

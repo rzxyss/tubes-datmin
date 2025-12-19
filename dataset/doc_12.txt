@@ -1,0 +1,13 @@
+JUDUL:
+Distribusi Koefisien Fourier integral dari Bentuk Setengah Modular
+  Modulo Primes Berat Integral
+
+ABSTRAK:
+  Baru-baru ini, Bruinier dan Ono mengklasifikasikan bentuk titik puncak $f(z) := \sum_{n=0}^{\infty}
+a_f(n)q ^n \in S_{\lambda+1/2}(\Gamma_0(N),\chi)\cap \mathbb{Z}[[q]]$ yang berhasil
+tidak memenuhi properti distribusi tertentu untuk modulo bilangan prima ganjil $p$. Dalam hal ini
+kertas, menggunakan Braket Rankin-Cohen, kami memperluas hasil ini ke bentuk modular
+setengah berat integral untuk bilangan prima $p \geq 5$. Sebagai penerapan teorema utama kami
+kita memperoleh properti distribusi, untuk modulo bilangan prima $p\geq5$, dari jejaknya
+moduli tunggal dan nomor kelas Hurwitz. Kami juga mempelajari analogi Newman
+dugaan untuk overpartisi.

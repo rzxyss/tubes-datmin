@@ -1,0 +1,28 @@
+JUDUL:
+Survei Spitzer c2d tentang Awan Antarbintang Besar, Terdekat. IX. Itu
+  Populasi Serpens YSO Seperti yang Diamati Dengan IRAC dan MIPS
+
+ABSTRAK:
+  Kami mendiskusikan hasil gabungan IRAC dan MIPS c2d Spitzer Legacy
+pengamatan wilayah pembentuk bintang Serpens. Secara khusus kami menyajikan satu set
+kriteria untuk mengisolasi objek bintang muda yang bonafid, YSO, dari
+kontaminasi latar belakang yang luas oleh objek ekstra-galaksi. Kami kemudian berdiskusi
+sifat-sifat dari kumpulan kepercayaan tinggi YSO yang dihasilkan. Kami menemukan 235 seperti itu
+objek di bidang 0,85 derajat^2 yang ditutupi dengan IRAC dan MIPS. Sebuah
+kumpulan tambahan 51 YSO dengan tingkat kepercayaan lebih rendah di luar area ini teridentifikasi
+dari data MIPS dikombinasikan dengan fotometri 2MASS. Kami menggambarkan dua set
+hasil, diagram warna-warna untuk membandingkan properti sumber yang kami amati
+model teoretis untuk sistem bintang/disk/amplop dan pemodelan kami sendiri
+dari subset objek kita yang tampak seperti bintang+disk. Benda-benda ini
+menunjukkan berbagai macam properti disk, dari banyak properti yang dapat disesuaikan
+secara aktif menambah disk ke beberapa dengan disk pasif dan bahkan mungkin
+disk puing-puing. Kami menemukan bahwa fungsi luminositas YSO di Serpens meluas
+turun hingga setidaknya beberapa x 0,001 Lsun atau lebih rendah untuk asumsi jarak 260 pc.
+Batas bawah mungkin ditentukan oleh ketidakmampuan kami membedakan YSO
+sumber ekstra-galaksi lebih banyak dibandingkan dengan kurangnya YSO pada luminositas yang sangat rendah.
+Analisis pengelompokan spasial menunjukkan bahwa YSO yang kurang berkembang memang demikian
+lebih berkerumun dibandingkan tahap-tahap selanjutnya dan itulah latar belakangnya
+populasi ekstra-galaksi dapat ditampung dengan fungsi korelasi dua titik yang sama
+seperti yang terlihat dalam studi ekstra-galaksi lainnya. Kami juga menyajikan tabel pertandingan
+antara beberapa studi inframerah dan sinar-X sebelumnya tentang Serpens YSO
+populasi dan kumpulan data Spitzer kami.

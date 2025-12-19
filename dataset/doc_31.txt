@@ -1,0 +1,15 @@
+JUDUL:
+Penyaluran kristal proton maju LHC dengan distribusi yang dipertahankan
+  ruang fase
+
+ABSTRAK:
+  Kami menunjukkan bahwa kristal dapat menjebak distribusi luas (x, x', y, y', E).
+partikel dan menyalurkannya diawetkan dengan presisi tinggi. Ini diambil sampelnya dan ditahan
+distribusi dapat diarahkan oleh kristal bengkok untuk analisis hilir. Di
+simulasi untuk Large Hadron Collider 7 TeV, sebuah kristal yang disesuaikan dengan
+kisi akselerator menjebak 90% proton yang tersebar secara difraksi
+titik interaksi dengan divergensi 100 kali sudut kritis. Kami mengatur
+kriteria adaptasi kristal meningkatkan efisiensi ~100 kali lipat. proton
+sudut dipertahankan dalam transmisi kristal dengan akurasi hingga 0,1
+mikrorad. Hal ini memungkinkan penerapan kristal untuk pengukuran yang lebih maju
+proton di LHC.

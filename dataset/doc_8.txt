@@ -1,0 +1,18 @@
+JUDUL:
+Solusi numerik kompresi shock dan ramp untuk material umum
+  properti
+
+ABSTRAK:
+  Formulasi umum dikembangkan untuk mewakili model material
+aplikasi dalam pemuatan dinamis. Metode numerik dirancang untuk menghitung
+respons terhadap guncangan dan kompresi ramp, dan dekompresi ramp, generalisasi
+solusi sebelumnya untuk persamaan keadaan skalar. Metode numeriknya adalah
+ditemukan fleksibel dan kuat, dan mencocokkan hasil analitik dengan tinggi
+akurasi. Metode dasar solusi ramp dan shock digabungkan untuk memecahkan masalah tersebut
+jalur deformasi komposit, seperti dampak akibat guncangan, dan guncangan
+interaksi dengan antarmuka planar antara bahan yang berbeda. Ini
+perhitungan menangkap sebagian besar fisika dinamika material pada umumnya
+eksperimen, tanpa memerlukan simulasi penyelesaian spasial. Contoh
+perhitungan dibuat berdasarkan riwayat pembebanan pada logam, yang mengilustrasikan efeknya
+plastik bekerja pada suhu yang diinduksi dalam kuasi-isentropik dan
+eksperimen pelepasan kejutan, dan efek transisi fase.

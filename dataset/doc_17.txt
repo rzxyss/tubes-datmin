@@ -1,0 +1,25 @@
+JUDUL:
+Pengamatan Spektroskopi Hidrae EX Kutub Menengah di
+  Ketenangan
+
+ABSTRAK:
+  Hasil pengamatan spektroskopi Intermediate Polar (IP) EX Hya
+dalam keadaan tenang selama tahun 1991 dan 2001 disajikan. Radial termodulasi putaran
+kecepatan yang konsisten dengan asal cakram luar terdeteksi untuk pertama kalinya
+waktu dalam IP. Pulsasi putaran dimodulasi dengan kecepatan mendekati ~500-600
+km/detik. Kecepatan ini konsisten dengan kecepatan material yang beredar di
+tepi luar piringan akresi, menunjukkan corotation dari akresi
+tirai dengan bahan dekat radius lobus Roche. Selanjutnya putar Doppler
+tomogram telah mengungkapkan bukti perluasan emisi tirai akresi
+dari kecepatan ~500 km/s hingga ~1000 km/s. Temuan ini telah mengkonfirmasi hal tersebut
+prediksi model teoritis King & Wynn (1999), Belle et al. (2002) dan
+Norton dkk. (2004) untuk EX Hya yang memperkirakan pertambahan besar tirai itu
+meluas hingga jarak yang dekat dengan radius lobus Roche dalam sistem ini. Bukti
+untuk aliran luapan material yang jatuh ke magnetosfer diamati,
+mengkonfirmasikan hasil Belle et al. (2005) bahwa disc overflow di EX Hya adalah
+hadir selama ketenangan dan juga ledakan. Tampaknya hbeta dan
+kecepatan radial putaran hgamma berasal dari perputaran corong pada
+tepi cakram luar, sedangkan halfa dihasilkan karena aliran
+materi sepanjang garis medan jauh dari katai putih (komponen sempit) dan
+dekat dengan katai putih (komponen basis luas), sesuai dengan
+model tirai akresi.

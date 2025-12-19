@@ -1,0 +1,14 @@
+JUDUL:
+Sifat Spektroskopi Polaron dalam Sistem Berkorelasi Kuat oleh
+  Metode Diagram Monte Carlo yang Tepat
+
+ABSTRAK:
+  Kami menyajikan kemajuan terkini dalam pemahaman tentang keadaan dasar dan keadaan tereksitasi
+dari sistem berpasangan elektron-fonon yang diperoleh dengan metode baru
+Diagrammatic Monte Carlo dan Optimasi Stochastic, yang memungkinkan
+perhitungan bebas perkiraan fungsi Matsubara Green dalam waktu imajiner
+dan melakukan kelanjutan analitik yang tidak bias ke frekuensi nyata. Kami menyajikan
+hasil numerik yang tepat pada sifat keadaan dasar, fungsi spektral Lehmann
+dan konduktivitas optik dari berbagai sistem yang berkorelasi kuat: Frohlich
+polaron, eksiton-polaron Rashba-Pekar, polaron semu Jahn-Teller, eksiton, dan
+berinteraksi dengan lubang fonon dalam model tJ.

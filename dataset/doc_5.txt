@@ -1,0 +1,7 @@
+JUDUL:
+Dari diadik $\Lambda_{\alpha}$ ke $\Lambda_{\alpha}$
+
+ABSTRAK:
+  Dalam makalah ini kami menunjukkan cara menghitung norma $\Lambda_{\alpha}$, $\alpha\ge
+0$, menggunakan kisi diadik. Hasil ini merupakan konsekuensi dari uraian
+ruang Hardy $H^p(R^N)$ dalam bentuk atom diadik dan atom khusus.

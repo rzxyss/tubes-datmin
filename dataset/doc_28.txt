@@ -1,0 +1,9 @@
+JUDUL:
+Pfaffians, hafnians dan produk dari fungsi linier nyata
+
+ABSTRAK:
+  Kami membuktikan ketidaksetaraan Lieb pada determinan versi pfaffian dan hafnian
+dan permanen matriks semi-pasti positif. Kami menggunakan hafnian
+ketimpangan untuk meningkatkan batas bawah R\'ev\'esz dan Sarantopoulos di
+norma produk fungsi linier pada ruang Euclidean nyata (subjek ini
+kadang-kadang disebut masalah `konstanta polarisasi linier nyata').

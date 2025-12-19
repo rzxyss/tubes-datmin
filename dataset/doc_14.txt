@@ -1,0 +1,7 @@
+JUDUL:
+Integral berulang dan produk loop
+
+ABSTRAK:
+  Pada artikel ini kita membahas hubungan antara topologi string dan
+bentuk diferensial berdasarkan teori integral iterasi Chen dan
+kompleks batang siklik.

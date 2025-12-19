@@ -1,0 +1,10 @@
+JUDUL:
+Amplitudo loop superstring fermionik dalam formalisme spinor murni
+
+ABSTRAK:
+  Formulasi spinor murni dari superstring sepuluh dimensi mengarah ke
+amplitudo loop supersimetris nyata, dinyatakan sebagai integral murni
+ruang super spinor. Makalah ini mengeksplorasi berbagai metode untuk mengevaluasi hal ini
+integral dan kemudian menggunakannya untuk menghitung faktor kinematik dari satu loop
+dan amplitudo empat titik tak bermassa dua putaran yang melibatkan dua dan empat Ramond
+negara bagian.

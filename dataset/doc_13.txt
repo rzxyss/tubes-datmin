@@ -1,0 +1,14 @@
+JUDUL:
+$p$-adic Batas Bentuk Modular Holomorfik Lemah dari Setengah Integral
+  Berat
+
+ABSTRAK:
+  Serre memperoleh batas p-adic dari koefisien Fourier integral
+formulir modular pada $SL_2(\mathbb{Z})$ untuk $p=2,3,5,7$. Dalam tulisan ini, kami memperluas
+hasil dari Serre menjadi bentuk modular holomorfik lemah dengan berat setengah integral
+pada $\Gamma_{0}(4N)$ untuk $N=1,2,4$. Pembuktian didasarkan pada hubungan linier antar
+Koefisien Fourier bentuk modular dengan berat setengah integral. Sebagai aplikasi
+kita memperoleh kongruensi eksponen Borcherds, kongruensi hasil bagi
+Deret Eisentein dan kongruensi nilai fungsi $L$ pada titik tertentu
+juga dipelajari. Selanjutnya, kongruensi koefisien Fourier dari
+Bentuk modular Siegel di Maass Space diperoleh dengan menggunakan pengangkatan Ikeda.

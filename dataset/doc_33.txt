@@ -1,0 +1,16 @@
+JUDUL:
+Konvergensi pendekatan dipol diskrit. I. Teoritis
+  analisis
+
+ABSTRAK:
+  Kami melakukan analisis konvergensi teoretis yang ketat terhadap diskrit
+pendekatan dipol (DDA). Kami membuktikan bahwa kesalahan dalam kuantitas yang diukur adalah
+dibatasi oleh jumlah suku linier dan kuadrat sebesar dipol d, kapan
+yang terakhir berada dalam kisaran penerapan DDA. Selain itu, suku liniernya adalah
+secara signifikan lebih kecil untuk penghambur berbentuk kubik dibandingkan untuk penghambur berbentuk non-kubik.
+Oleh karena itu, untuk kesalahan d yang kecil untuk partikel berbentuk kubus jauh lebih kecil
+dibandingkan yang berbentuk nonkubikal. Pentingnya relatif dari istilah linier
+menurun seiring bertambahnya ukuran, maka konvergensi DDA menjadi cukup besar
+pencar adalah kuadrat dalam rentang umum d. Numerik yang luas
+simulasi dilakukan untuk berbagai macam d. Akhirnya kita membahas sebuah angka
+perkembangan baru dalam DDA dan konsekuensinya terhadap konvergensi.

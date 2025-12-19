@@ -1,0 +1,15 @@
+JUDUL:
+Dekomposisi Grafik yang mensertifikasi ketersebaran
+
+ABSTRAK:
+  Kami mendeskripsikan algoritme baru, permainan $(k,\ell)$-pebble dengan warna, dan kegunaannya
+itu memperoleh karakterisasi keluarga grafik jarang $(k,\ell)$ dan
+solusi algoritmik untuk serangkaian masalah mengenai dekomposisi pohon
+grafik. Contoh khusus dari grafik jarang muncul dalam teori kekakuan dan ada
+mendapat perhatian yang meningkat dalam beberapa tahun terakhir. Khususnya, warna kami
+kerikil menggeneralisasi dan memperkuat hasil sebelumnya dari Lee dan Streinu dan
+memberikan bukti baru tentang karakterisasi arborisitas Tutte-Nash-Williams. Kami
+juga menyajikan dekomposisi baru yang mengesahkan ketersebaran berdasarkan
+$(k,\ell)$-permainan kerikil dengan warna. Pekerjaan kami juga mengungkap hubungan antara keduanya
+algoritma permainan kerikil dan algoritma grafik jarang sebelumnya oleh Gabow, Gabow dan
+Westermann dan Hendrickson.

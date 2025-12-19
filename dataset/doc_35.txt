@@ -1,0 +1,14 @@
+JUDUL:
+Konvergensi pendekatan dipol diskrit. II. Ekstrapolasi
+  teknik untuk meningkatkan akurasi
+
+ABSTRAK:
+  Kami mengusulkan teknik ekstrapolasi yang memungkinkan peningkatan akurasi
+perhitungan pendekatan dipol diskrit. Kinerja teknik ini
+dipelajari secara empiris berdasarkan simulasi ekstensif untuk 5 kasus uji menggunakan
+banyak diskritisasi yang berbeda. Kualitas ekstrapolasi meningkat dengan
+menyempurnakan diskritisasi mencapai kinerja luar biasa khususnya untuk
+partikel berbentuk kubus. Penurunan kesalahan sebesar dua kali lipat adalah
+didemonstrasikan. Kami juga mengusulkan perkiraan kesalahan ekstrapolasi
+terbukti dapat diandalkan. Akhirnya kami mengusulkan metode sederhana untuk memisahkan secara langsung
+kesalahan bentuk dan diskritisasi dan mengilustrasikannya untuk satu kasus uji.

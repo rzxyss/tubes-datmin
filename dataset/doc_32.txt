@@ -1,0 +1,18 @@
+JUDUL:
+Menyelidiki interaksi neutrino non-standar dengan neutrino supernova
+
+ABSTRAK:
+  Kami menganalisis kemungkinan menyelidiki interaksi neutrino non-standar
+(NSI, singkatnya) melalui deteksi neutrino yang dihasilkan di masa depan
+supernova galaksi (SN). Kami mempertimbangkan efek NSI pada neutrino
+propagasi melalui amplop SN dalam kerangka tiga neutrino, berbayar
+perhatian khusus pada penyertaan konversi resonansi yang diinduksi NSI, yang
+mungkin terjadi pada lapisan dalam yang paling terdeletonis. Kami mempelajari kemungkinannya
+mendeteksi efek NSI dalam detektor Cherenkov air Megaton, baik melalui
+efek modulasi dalam spektrum $\bar\nu_e$ karena (i) berlalunya guncangan
+gelombang melalui selubung SN, (ii) ketergantungan elektron terhadap waktu
+pecahan dan (iii) pengaruh materi bumi; atau, akhirnya, melalui kemungkinan
+deteksi ledakan $\nu_e$ neutronisasi. Kami menemukan bahwa file $\bar\nu_e$
+spektrum dapat menunjukkan fitur dramatis karena resonansi internal yang diinduksi NSI
+konversi. Hal ini terjadi untuk kekuatan NSI non-universal sebesar beberapa %, dan untuk
+NSI pengubah rasa yang sangat kecil di atas beberapa$\kali 10^{-5}$.

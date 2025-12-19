@@ -1,0 +1,14 @@
+JUDUL:
+Kubus parsial: struktur, karakterisasi, dan konstruksi
+
+ABSTRAK:
+  Kubus parsial adalah subgraf isometrik dari hiperkubus. Struktur pada grafik
+didefinisikan melalui semikubus, dan permainan relasi Djokovi\'{c} dan Winkler
+peran penting dalam teori kubus parsial. Struktur ini digunakan
+dalam makalah untuk mengkarakterisasi graf bipartit dan kubus parsial sembarang
+dimensi. Karakterisasi baru ditetapkan dan bukti baru dari beberapa hal diketahui
+hasil diberikan.
+  Operasi produk dan penempelan Cartesian, serta perluasan dan
+proses kontraksi digunakan dalam kertas untuk membuat kubus parsial baru
+dari yang lama. Khususnya, dimensi isometrik dan kisi berhingga
+sebagian kubus yang diperoleh melalui operasi ini dihitung.

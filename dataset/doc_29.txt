@@ -1,0 +1,14 @@
+JUDUL:
+Memahami Pemutusan Simetri Rasa dan Putaran Rasa Nukleon
+  Struktur dalam Model Chiral Quark
+
+ABSTRAK:
+  Dalam $\XQM$, quark dapat memancarkan boson Goldstone. Simetri rasa pecah
+proses emisi boson Goldstone digunakan untuk menafsirkan nukleon
+struktur perputaran rasa. Dalam tulisan ini, kita mempelajari struktur bagian dalam
+quark konstituen yang tersirat dalam $\XQM$ yang disebabkan oleh emisi boson Goldstone
+proses dalam nukleon. Dari model Hamiltonian yang disederhanakan yang diturunkan dari $\XQM$,
+fungsi gelombang intrinsik dari quark penyusunnya ditentukan. Lalu
+diperoleh probabilitas transisi emisi boson Goldstone dari a
+quark dapat memberikan interpretasi yang masuk akal terhadap pelanggaran simetri rasa
+struktur putaran rasa nukleon.

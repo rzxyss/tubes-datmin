@@ -1,145 +1,17 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pencarian Kata - Dataset</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #1a1a1a;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-      }
-
-      .container {
-        background: #2d2d2d;
-        padding: 40px;
-        border-radius: 0;
-        box-shadow: none;
-        max-width: 500px;
-        width: 100%;
-      }
-
-      h1 {
-        color: #e0e0e0;
-        margin-bottom: 10px;
-        text-align: center;
-        font-size: 24px;
-        font-weight: normal;
-      }
-
-      .subtitle {
-        color: #a0a0a0;
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 14px;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 8px;
-        color: #e0e0e0;
-        font-weight: normal;
-        font-size: 14px;
-      }
-
-      input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 0;
-        font-size: 14px;
-        background: #3a3a3a;
-        color: #e0e0e0;
-      }
-
-      input[type="text"]:focus {
-        outline: none;
-      }
-
-      button {
-        width: 100%;
-        padding: 12px;
-        background: #4a9eff;
-        color: #1a1a1a;
-        border: none;
-        border-radius: 0;
-        font-size: 14px;
-        font-weight: normal;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-
-      button:hover {
-        background: #5fadff;
-      }
-
-      button:active {
-        background: #3d8de6;
-      }
-
-      .error {
-        background-color: #4a2020;
-        color: #ff8080;
-        padding: 12px;
-        border-radius: 0;
-        margin-bottom: 20px;
-        font-size: 14px;
-      }
-
-      .info {
-        background-color: #1f3a3a;
-        color: #80d0d0;
-        padding: 15px;
-        border-radius: 0;
-        margin-top: 20px;
-        font-size: 13px;
-        line-height: 1.6;
-      }
-
-      .info strong {
-        display: block;
-        margin-bottom: 5px;
-      }
-    </style>
-  </head>
-  <body>
+<html>
+<head>
+    <title>IR Search Engine</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
     <div class="container">
-      <h1>Tokenizing dan Stemming</h1>
+        <h1>Information Retrieval - TF-IDF Search</h1>
 
-      {% if error %}
-      <div class="error">{{ error }}</div>
-      {% endif %}
-
-      <form action="/search" method="POST">
-        <div class="form-group">
-          <label for="query">Masukkan kata :</label>
-          <input
-            type="text"
-            id="query"
-            name="query"
-            placeholder="Contoh: teknologi, data, sistem"
-            required
-            autofocus
-          />
-        </div>
-
-        <button type="submit">Cari</button>
-      </form>
+        <form action="/search" method="POST">
+            <input type="text" name="query" placeholder="Masukkan query..." required>
+            <button type="submit">Cari</button>
+        </form>
     </div>
-  </body>
+</body>
 </html>

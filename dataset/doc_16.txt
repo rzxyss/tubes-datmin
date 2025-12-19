@@ -1,0 +1,15 @@
+JUDUL:
+Seumur hidup baryon yang terpesona ganda
+
+ABSTRAK:
+  Dalam karya ini, kami mengevaluasi masa hidup para baryon yang terpesona ganda
+$\Xi_{cc}^{+}$, $\Xi_{cc}^{++}$ dan $\Omega_{cc}^{+}$. Kami menghitung dengan cermat
+kontribusi non-penonton pada tingkat quark di mana Cabibbo ditekan
+diagram juga disertakan. Elemen matriks hadronik dievaluasi dalam
+model osilator harmonik non-relativistik sederhana. Hasil numerik kami adalah
+umumnya konsisten dengan yang diperoleh penulis lain yang menggunakan diquark
+model. Namun, semua prediksi teoritis mengenai masa hidup mempunyai urutan yang sama
+lebih besar dari batas atas yang ditetapkan oleh pengukuran SELEX baru-baru ini. Ini
+Perbedaan ini akan diklarifikasi melalui eksperimen di masa depan, jika lebih akurat
+eksperimen masih menegaskan nilai kolaborasi SELEX, pasti ada
+beberapa mekanisme yang tidak diketahui untuk dieksplorasi.

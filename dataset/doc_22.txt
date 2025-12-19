@@ -1,0 +1,23 @@
+JUDUL:
+Integrator grup Stochastic Lie
+
+ABSTRAK:
+  Kami menyajikan integrator grup Lie untuk diferensial stokastik nonlinier
+persamaan dengan bidang vektor non-komutatif yang solusinya berkembang secara mulus
+manifold dimensi terbatas. Diberikan aksi kelompok Lie yang menghasilkan transportasi
+sepanjang manifold, kita tarik kembali aliran stokastik pada manifold ke Lie
+mengelompokkan melalui tindakan, dan kemudian menarik kembali aliran ke tindakan yang sesuai
+Lie aljabar melalui peta eksponensial. Kami membuat perkiraan terhadap
+aliran stokastik dalam aljabar Lie melalui operasi tertutup dan kemudian didorong kembali ke
+kelompok Lie dan kemudian ke manifold, sehingga memastikan perkiraan kita berada
+manifoldnya. Kami menyebut skema seperti itu metode stokastik Munthe-Kaas menurut namanya
+rekan deterministik. Kami juga menyajikan integrasi grup Lie stokastik
+skema berdasarkan metode Castell--Gaines. Ini melibatkan penggunaan yang mendasarinya
+integrator diferensial biasa untuk memperkirakan aliran yang dihasilkan oleh a
+seri Lie eksponensial stokastik terpotong. Mereka menjadi kelompok Lie stokastik
+skema integrator jika kita menggunakan metode Munthe-Kaas sebagai dasar yang biasa
+integrator diferensial. Selanjutnya, kami menunjukkan bahwa beberapa metode Castell--Gaines adalah
+secara seragam lebih akurat daripada skema stokastik Taylor yang sesuai.
+Terakhir kami mendemonstrasikan metode kami dengan mensimulasikan dinamika benda kaku bebas
+tubuh seperti satelit dan kendaraan bawah air otonom keduanya terganggu oleh
+dua proses kebisingan stokastik perkalian independen.

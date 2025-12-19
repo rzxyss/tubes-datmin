@@ -1,0 +1,33 @@
+body {
+    background: #f2f2f2;
+    font-family: Arial;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+}
+
+input[type=text] {
+    width: 80%;
+    padding: 12px;
+}
+
+button {
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}

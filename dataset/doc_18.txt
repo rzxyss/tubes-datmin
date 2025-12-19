@@ -1,0 +1,10 @@
+JUDUL:
+Mencari teorema indeks Callias yang digeneralisasi
+
+ABSTRAK:
+  Kami memberikan resep cara menghitung indeks Callias, menggunakan as
+pengatur fungsi eksponensial. Kami menemukan kesepakatan dengan hasil-hasil lama dalam semua hal
+dimensi ganjil. Kami menunjukkan bahwa masalah penghitungan dimensi
+ruang moduli string ganda diri dapat dirumuskan sebagai masalah indeks di
+ruang berdimensi genap (loop-). Kami kira regulator yang digunakan dalam Surat ini
+dapat diterapkan pada masalah indeks ini.

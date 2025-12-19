@@ -1,0 +1,15 @@
+JUDUL:
+Menyesuaikan efek korelasi dengan interaksi elektron-fonon
+
+ABSTRAK:
+  Kami menyelidiki efek penyetelan energi fonon pada korelasi
+efek dalam model interaksi elektron-fonon menggunakan DMFT. Di rezim
+di mana elektron keliling, korelasi yang didorong oleh elektron-fonon seketika
+dan distorsi statis bersaing pada skala energi yang serupa, kami menemukan beberapa
+hasil yang menarik termasuk (1) Persilangan dari perilaku band ke Mott di
+fungsi spektral, yang mengarah ke fitur pita hibrida/Mott dalam spektral
+berfungsi untuk frekuensi fonon sedikit lebih besar dari lebar pita. (2) Sejak
+konduktivitas optik bergantung secara sensitif pada bentuk spektral
+fungsi, kami menunjukkan bahwa rezim seperti itu harus dapat diamati melalui tingkat rendah
+bentuk frekuensi konduktivitas optik. (3) Resistivitasnya berlipat ganda
+susunan puncak kondo

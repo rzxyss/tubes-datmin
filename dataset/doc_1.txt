@@ -1,0 +1,19 @@
+JUDUL:
+Perhitungan penampang produksi difoton cepat di Tevatron dan
+  energi LHC
+
+ABSTRAK:
+  Perhitungan diferensial penuh dalam kromodinamika kuantum perturbatif adalah
+disajikan untuk produksi pasangan foton besar-besaran di penumbuk hadron. Semua
+kontribusi mengganggu urutan terdepan dari quark-antiquark,
+gluon-(anti)quark, dan subproses gluon-gluon juga disertakan
+semua pesanan penjumlahan kembali radiasi gluon keadaan awal berlaku di
+akurasi logaritmik paling depan. Daerah ruang fase adalah
+ditentukan di mana perhitungannya paling dapat diandalkan. Kesepakatan yang baik adalah
+ditunjukkan dengan data dari Fermilab Tevatron, dan prediksi dibuat
+tes yang lebih rinci dengan data CDF dan DO. Prediksi ditampilkan untuk
+distribusi pasangan difoton yang dihasilkan pada energi Hadron Besar
+Penumbuk (LHC). Distribusi pasangan difoton dari peluruhan Higgs
+boson dibandingkan dengan yang dihasilkan dari proses QCD di LHC
+bahwa peningkatan kepekaan terhadap sinyal dapat diperoleh dengan bijaksana
+pemilihan acara.
