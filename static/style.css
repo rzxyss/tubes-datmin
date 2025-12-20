@@ -1,33 +1,349 @@
-body {
-    background: #f2f2f2;
-    font-family: Arial;
+/* ===== IMPORT FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 60%;
-    margin: auto;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffc5d9 0%, #ffb3c6 50%, #ffc5d9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-input[type=text] {
-    width: 80%;
-    padding: 12px;
+/* ===== CONTAINER dengan BORDER ORNAMENT ===== */
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 0 8px #a8577e,
+        0 0 0 12px #ffc5d9;
+    animation: fadeIn 0.6s ease-out;
+    position: relative;
 }
 
-button {
-    padding: 12px;
-    background: black;
+/* Ornament corners */
+.container::before,
+.container::after {
+    content: '✿ ❀ ✿';
+    position: absolute;
+    color: #a8577e;
+    font-size: 1.5em;
+    letter-spacing: 8px;
+    z-index: 3;
+}
+
+.container::before {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container::after {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Inner container dengan background putih */
+.container > * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    color: #a8577e;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #8b4566;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #a8577e;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 5px solid #ffc5d9;
+}
+
+h4 {
+    color: #8b4566;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h4::before {
+    content: '✿';
+    font-size: 1.2em;
+    color: #ffc5d9;
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 18px 25px;
+    border: 3px solid #ffc5d9;
+    border-radius: 50px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: white;
+    color: #8b4566;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #a8577e;
+    box-shadow: 0 0 0 4px rgba(168, 87, 126, 0.1);
+}
+
+input[type="text"]::placeholder {
+    color: #d4a5b8;
+}
+
+button[type="submit"] {
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #a8577e 0%, #8b4566 100%);
     color: white;
     border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(168, 87, 126, 0.3);
 }
 
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(168, 87, 126, 0.4);
+    background: linear-gradient(135deg, #8b4566 0%, #a8577e 100%);
+}
+
+button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+/* ===== TABLE ===== */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid #ffc5d9;
+}
+
+th {
+    background: linear-gradient(135deg, #a8577e 0%, #8b4566 100%);
+    color: white;
+    padding: 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #ffc5d9;
+    color: #8b4566;
+    transition: background 0.2s ease;
     background: white;
 }
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #fff5f8;
+}
+
+/* ===== BOX (untuk konten, tokens, dll) ===== */
+.box {
+    background: #fff5f8;
+    border: 2px solid #ffc5d9;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    color: #8b4566;
+    line-height: 1.8;
+    word-wrap: break-word;
+    box-shadow: 0 3px 10px rgba(168, 87, 126, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #a8577e 0%, #8b4566 100%);
+    border-radius: 15px 0 0 15px;
+}
+
+.box:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(168, 87, 126, 0.15);
+}
+
+/* ===== LINKS ===== */
+a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a8577e;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: #fff5f8;
+    border: 2px solid #ffc5d9;
+}
+
+a:hover {
+    background: #a8577e;
+    color: white;
+    border-color: #a8577e;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(168, 87, 126, 0.3);
+}
+
+/* ===== HR ===== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffc5d9, transparent);
+    margin: 40px 0;
+    opacity: 0.5;
+}
+
+/* ===== PARAGRAPH ===== */
+p {
+    color: #8b4566;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+p b {
+    color: #a8577e;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 25px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+    
+    form {
+        flex-direction: column;
+    }
+    
+    input[type="text"],
+    button[type="submit"] {
+        width: 100%;
+    }
+    
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 12px;
+    }
+}
+
+/* ===== EXTRA CUTE TOUCHES ===== */
+::selection {
+    background: #ffc5d9;
+    color: #8b4566;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff5f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #a8577e 0%, #8b4566 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #8b4566 0%, #a8577e 100%);
 }
