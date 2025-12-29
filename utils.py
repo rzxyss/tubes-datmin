@@ -84,6 +84,11 @@ def preprocess(text, kamus):
     tokens = [stem_sastrawi(t, kamus) for t in tokens]
     return tokens
 
+def count_terms(tokens):
+    freq = {}
+    for t in tokens:
+        freq[t] = freq.get(t, 0) + 1
+    return freq
 
 #=== TF-IDF PROCESS ===#
 def compute_tf(tokens):
@@ -91,6 +96,13 @@ def compute_tf(tokens):
     for t in tokens:
         tf[t] = tf.get(t, 0) + 1
     return tf
+
+def count_terms(tokens):
+    freq = {}
+    for t in tokens:
+        freq[t] = freq.get(t, 0) + 1
+    return freq
+
 
 def compute_idf(all_docs):
     idf = {}

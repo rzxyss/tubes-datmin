@@ -51,6 +51,21 @@
         <div class="box">
             {{ stemmed }}
         </div>
+
+        <h4>Frekuensi Kata Dasar</h4>
+        <table>
+            <tr>
+                <th>Kata Dasar</th>
+                <th>Jumlah</th>
+            </tr>
+            {% for word, count in stem_freq.items() %}
+            <tr>
+                <td>{{ word }}</td>
+                <td>{{ count }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
         {% endif %}
 
         <br>

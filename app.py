@@ -5,7 +5,8 @@ from utils import (
     read_txt, read_pdf, read_docx,
     load_kamus, preprocess,
     compute_tf, compute_idf,
-    vectorize, cosine_sim
+    vectorize, cosine_sim,
+    count_terms
 )
 
 app = Flask(__name__)
@@ -85,10 +86,21 @@ def search():
 
     raw_text = docs_raw[top_index][:1500]  # cuplikan isi
 
-    # Tahapan preprocessing untuk ditampilkan
+ # =============================
+# PREPROCESSING DOKUMEN TERATAS
+# =============================
+
+    # Tokenizing (sebelum filtering & stemming)
     tokens = docs_raw[top_index].lower().split()
-    cleaned = preprocess(docs_raw[top_index], kamus)
-    stemmed = cleaned
+
+    # Filtering + Stemming (algoritma sastrawi manual)
+    stemmed_tokens = preprocess(docs_raw[top_index], kamus)
+
+    # Hitung frekuensi kata dasar
+    stem_freq = {}
+    for w in stemmed_tokens:
+        stem_freq[w] = stem_freq.get(w, 0) + 1
+
 
     return render_template(
         "result.html",
@@ -97,8 +109,9 @@ def search():
         top_file=top_file,
         content=raw_text,
         tokens=tokens[:50],
-        cleaned=cleaned[:50],
-        stemmed=stemmed[:50]
+        cleaned=stemmed_tokens[:50],
+        stemmed=stemmed_tokens[:50],
+        stem_freq=stem_freq
     )
 
 
