@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>IR Search Engine</title>
+    <meta charset="UTF-8">
+    <title>Sistem Temu Balik Informasi</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Information Retrieval - TF-IDF Search</h1>
+<div class="container">
 
-        <form action="/search" method="POST">
-            <input type="text" name="query" placeholder="Masukkan query..." required>
-            <button type="submit">Cari</button>
-        </form>
-    </div>
+    <h1>Sistem Temu Balik Informasi</h1>
+
+    <p class="subtitle">
+        Metode <b>Pearson Correlation Coefficient</b> dengan pembobotan <b>Term Frequency (TF)</b><br>
+        Stemming Bahasa Indonesia menggunakan <b>Algoritma Sastrawi (Nazief & Adriani)</b>
+    </p>
+
+    <hr>
+
+    <!-- FORM PENCARIAN -->
+    <h3>Pencarian Dokumen</h3>
+
+    <form action="/search" method="POST">
+        <input
+            type="text"
+            name="query"
+            placeholder="Masukkan kata kunci pencarian..."
+            required
+        >
+        <button type="submit">Cari Dokumen</button>
+    </form>
+
+    <hr>
+
+    <!-- KETERANGAN SISTEM -->
+    <h3>Keterangan Sistem</h3>
+    <ul>
+        <li>Sistem membaca dokumen berekstensi <b>.txt</b>, <b>.pdf</b>, dan <b>.docx</b></li>
+        <li>Preprocessing meliputi: case folding, tokenizing, filtering, dan stemming</li>
+        <li>Perhitungan kemiripan menggunakan <b>Pearson Correlation Coefficient</b></li>
+        <li>Pembobotan kata berdasarkan frekuensi kemunculan (TF)</li>
+    </ul>
+
+</div>
 </body>
 </html>

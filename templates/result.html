@@ -1,76 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Hasil Pencarian</title>
+    <meta charset="UTF-8">
+    <title>Hasil Pencarian Dokumen</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
+<div class="container">
 
-        <h2>Hasil untuk: "{{ query }}"</h2>
+    <h2>Hasil Pencarian</h2>
+    <p><b>Query:</b> "{{ query }}"</p>
+    <hr>
 
-        <h3>Top 3 Dokumen Paling Relevan</h3>
+    <h3>Top 3 Dokumen Paling Relevan</h3>
 
-        <table>
+    <table>
+        <thead>
             <tr>
+                <th>Peringkat</th>
                 <th>Nama File</th>
-                <th>Similarity</th>
+                <th>Nilai Similarity (Pearson)</th>
             </tr>
-
+        </thead>
+        <tbody>
             {% for file, score in results %}
             <tr>
+                <td>{{ loop.index }}</td>
                 <td>{{ file }}</td>
                 <td>{{ score }}</td>
             </tr>
             {% endfor %}
-        </table>
+        </tbody>
+    </table>
 
-        {% if top_file %}
-        <hr>
+    {% if top_file %}
+    <hr>
 
-        <h3>Detail Dokumen Teratas</h3>
+    <!-- DETAIL DOKUMEN TERATAS -->
+    <h3>Dokumen Teratas</h3>
+    <p><b>Nama File:</b> {{ top_file }}</p>
 
-        <p><b>Nama File:</b> {{ top_file }}</p>
+    <h4>Cuplikan Isi Dokumen</h4>
+    <div class="box">
+        {{ content }}
+    </div>
 
-        <h4>Cuplikan Isi Dokumen</h4>
-        <div class="box">
-            {{ content }}
-        </div>
+    <hr>
 
-        <h4>Tokenizing</h4>
-        <div class="box">
-            {{ tokens }}
-        </div>
+    <!-- TAHAPAN PREPROCESSING -->
+    <h3>Tahapan Preprocessing</h3>
 
-        <h4>Pembersihan Kata</h4>
-        <div class="box">
-            {{ cleaned }}
-        </div>
+    <h4>Tokenizing</h4>
+    <div class="box">
+        {{ tokens }}
+    </div>
 
-        <h4>Stemming</h4>
-        <div class="box">
-            {{ stemmed }}
-        </div>
+    <h4>Filtering (Stopword Removal)</h4>
+    <div class="box">
+        {{ cleaned }}
+    </div>
 
-        <h4>Frekuensi Kata Dasar</h4>
-        <table>
+    <h4>Stemming (Algoritma Sastrawi – Nazief & Adriani)</h4>
+    <div class="box">
+        {{ stemmed }}
+    </div>
+
+    <hr>
+
+    <!-- FREKUENSI KATA -->
+    <h3>Frekuensi Kata Dasar (TF)</h3>
+
+    <table>
+        <thead>
             <tr>
                 <th>Kata Dasar</th>
-                <th>Jumlah</th>
+                <th>Jumlah Kemunculan</th>
             </tr>
+        </thead>
+        <tbody>
             {% for word, count in stem_freq.items() %}
             <tr>
                 <td>{{ word }}</td>
                 <td>{{ count }}</td>
             </tr>
             {% endfor %}
-        </table>
+        </tbody>
+    </table>
 
-        {% endif %}
+    {% endif %}
 
-        <br>
-        <a href="/">Kembali</a>
+    <br>
+    <a href="/" class="back-link">Kembali ke Pencarian</a>
 
-    </div>
+</div>
 </body>
 </html>

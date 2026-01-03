@@ -4,18 +4,13 @@ import os
 from utils import (
     read_txt, read_pdf, read_docx,
     load_kamus, preprocess,
-    compute_tf, compute_idf,
-    vectorize, cosine_sim,
-    count_terms
+    compute_tf, pearson_similarity
 )
 
 app = Flask(__name__)
-
 DATASET_PATH = "dataset"
 
-# =====================
-# LOAD KAMUS (SATU KALI)
-# =====================
+# LOAD KAMUS SEKALI
 kamus = load_kamus("kamus.txt")
 
 
@@ -30,12 +25,18 @@ def search():
     if not query:
         return render_template("index.html", error="Query tidak boleh kosong")
 
-    # === PREPROCESS QUERY ===
+
+    # PREPROCESS QUERY
+
     query_tokens = preprocess(query, kamus)
+    tf_query = compute_tf(query_tokens)
 
     docs_tokens = []
     docs_raw = []
     filenames = []
+
+
+    # BACA SEMUA DOKUMEN
 
     for filename in os.listdir(DATASET_PATH):
         path = os.path.join(DATASET_PATH, filename)
@@ -46,10 +47,7 @@ def search():
         if ext == "txt":
             text = read_txt(path)
         elif ext == "pdf":
-            try:
-                text = read_pdf(path)
-            except:
-                continue
+            text = read_pdf(path)
         elif ext == "docx":
             text = read_docx(path)
         else:
@@ -59,48 +57,35 @@ def search():
         docs_tokens.append(preprocess(text, kamus))
         filenames.append(filename)
 
-    # === VSM PROCESS ===
+
+    # PEARSON SIMILARITY (TF)
+
     vocab = sorted(set(sum(docs_tokens + [query_tokens], [])))
-
-    tf_docs = [compute_tf(tokens) for tokens in docs_tokens]
-    tf_query = compute_tf(query_tokens)
-
-    idf = compute_idf(docs_tokens)
-
-    doc_vectors = [vectorize(tf, idf, vocab) for tf in tf_docs]
-    query_vector = vectorize(tf_query, idf, vocab)
-
     results = []
-    for fname, vec in zip(filenames, doc_vectors):
-        sim = cosine_sim(query_vector, vec)
-        results.append((fname, round(sim, 4)))
+
+    for fname, tokens in zip(filenames, docs_tokens):
+        tf_doc = compute_tf(tokens)
+        score = pearson_similarity(tf_query, tf_doc, vocab)
+        results.append((fname, round(score, 4)))
 
     results.sort(key=lambda x: x[1], reverse=True)
-
-    # === AMBIL TOP 3 ===
     top_results = results[:3]
 
-    # === DOKUMEN TERATAS ===
+
+    # DOKUMEN TERATAS
+
     top_file = top_results[0][0]
     top_index = filenames.index(top_file)
 
-    raw_text = docs_raw[top_index][:1500]  # cuplikan isi
+    raw_text = docs_raw[top_index][:1500]
 
- # =============================
-# PREPROCESSING DOKUMEN TERATAS
-# =============================
-
-    # Tokenizing (sebelum filtering & stemming)
+    # Tahapan preprocessing untuk tampilan
     tokens = docs_raw[top_index].lower().split()
-
-    # Filtering + Stemming (algoritma sastrawi manual)
     stemmed_tokens = preprocess(docs_raw[top_index], kamus)
 
-    # Hitung frekuensi kata dasar
     stem_freq = {}
     for w in stemmed_tokens:
         stem_freq[w] = stem_freq.get(w, 0) + 1
-
 
     return render_template(
         "result.html",
