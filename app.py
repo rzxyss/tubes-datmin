@@ -10,7 +10,9 @@ from utils import (
 app = Flask(__name__)
 DATASET_PATH = "dataset"
 
-# LOAD KAMUS SEKALI
+# =====================
+# LOAD KAMUS (SATU KALI)
+# =====================
 kamus = load_kamus("kamus.txt")
 
 
@@ -25,18 +27,15 @@ def search():
     if not query:
         return render_template("index.html", error="Query tidak boleh kosong")
 
-
-    # PREPROCESS QUERY
-
-    query_tokens = preprocess(query, kamus)
+    # 1. PREPROCESS QUERY
+    query_tokens = preprocess(query, kamus)      # case folding + stopword + stemming
     tf_query = compute_tf(query_tokens)
+    query_terms = list(set(query_tokens))        # kata dasar query unik
 
+    # 2. BACA SEMUA DOKUMEN
     docs_tokens = []
     docs_raw = []
     filenames = []
-
-
-    # BACA SEMUA DOKUMEN
 
     for filename in os.listdir(DATASET_PATH):
         path = os.path.join(DATASET_PATH, filename)
@@ -54,12 +53,13 @@ def search():
             continue
 
         docs_raw.append(text)
-        docs_tokens.append(preprocess(text, kamus))
+        docs_tokens.append(preprocess(text, kamus))  # preprocessing dokumen
         filenames.append(filename)
 
+    if not docs_tokens:
+        return render_template("index.html", error="Dataset kosong")
 
-    # PEARSON SIMILARITY (TF)
-
+    # 3. HITUNG SIMILARITY
     vocab = sorted(set(sum(docs_tokens + [query_tokens], [])))
     results = []
 
@@ -71,15 +71,40 @@ def search():
     results.sort(key=lambda x: x[1], reverse=True)
     top_results = results[:3]
 
+    # 4. TF QUERY (TOP 3 SAJA)
+    query_tf_table = []
 
-    # DOKUMEN TERATAS
+    for fname, _ in top_results:
+        idx = filenames.index(fname)
+        tf_doc = compute_tf(docs_tokens[idx])
 
+        row = {
+            "doc": fname,
+            "counts": [],
+            "total": 0
+        }
+
+        for term in query_terms:
+            count = tf_doc.get(term, 0)
+            row["counts"].append(count)
+            row["total"] += count
+
+        query_tf_table.append(row)
+
+    # 5. DOKUMEN TERATAS
     top_file = top_results[0][0]
     top_index = filenames.index(top_file)
 
-    raw_text = docs_raw[top_index][:1500]
+    raw_text = docs_raw[top_index][:3000]
 
-    # Tahapan preprocessing untuk tampilan
+    # highlight kata query (berdasarkan kata dasar)
+    highlight_text = raw_text
+    for q in query_terms:
+        highlight_text = highlight_text.replace(
+            q, f"<mark>{q}</mark>"
+        )
+
+    # 6. PREPROCESSING TAMPILAN
     tokens = docs_raw[top_index].lower().split()
     stemmed_tokens = preprocess(docs_raw[top_index], kamus)
 
@@ -87,12 +112,15 @@ def search():
     for w in stemmed_tokens:
         stem_freq[w] = stem_freq.get(w, 0) + 1
 
+    # 7. RENDER HASIL
     return render_template(
         "result.html",
         query=query,
         results=top_results,
+        query_terms=query_terms,
+        query_tf_table=query_tf_table,
         top_file=top_file,
-        content=raw_text,
+        content=highlight_text,
         tokens=tokens[:50],
         cleaned=stemmed_tokens[:50],
         stemmed=stemmed_tokens[:50],

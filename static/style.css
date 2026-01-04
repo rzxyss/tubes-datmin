@@ -347,3 +347,10 @@ p b {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #8b4566 0%, #a8577e 100%);
 }
+
+mark {
+    background-color: #ffe066;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}

@@ -13,6 +13,34 @@
     <hr>
 
     <h3>Top 3 Dokumen Paling Relevan</h3>
+    <hr>
+    <h3>Frekuensi Kata Query di Setiap Dokumen</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Dokumen</th>
+                {% for term in query_terms %}
+                <th>{{ term }}</th>
+                {% endfor %}
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in query_tf_table %}
+            <tr>
+                <td>{{ row.doc }}</td>
+
+                {% for c in row.counts %}
+                <td>{{ c }}</td>
+                {% endfor %}
+
+                <td><b>{{ row.total }}</b></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 
     <table>
         <thead>
@@ -37,12 +65,9 @@
     <hr>
 
     <!-- DETAIL DOKUMEN TERATAS -->
-    <h3>Dokumen Teratas</h3>
-    <p><b>Nama File:</b> {{ top_file }}</p>
-
     <h4>Cuplikan Isi Dokumen</h4>
     <div class="box">
-        {{ content }}
+        {{ content | safe }}
     </div>
 
     <hr>
